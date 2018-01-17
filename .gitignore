@@ -15,3 +15,5 @@ SampleSDK30/Podfile
 SampleSDK30/Podfile.lock
 SampleSDK30/Pods/
 SampleSDK30/SampleSDK23.xcworkspace
+SampleSDK27/SampleSDK27/Assets.xcassets/Loader.imageset/Contents.json
+SampleSDK27/SampleSDK27/Assets.xcassets/Loader.imageset/fluid-loader.gif
