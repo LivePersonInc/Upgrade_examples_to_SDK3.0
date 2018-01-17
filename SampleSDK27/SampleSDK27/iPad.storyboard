@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="bS6-ij-slG">
+    <device id="ipad9_7" orientation="landscape">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment version="4352" identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Navigation Controller-->
+        <scene sceneID="Ae6-yW-d2c">
+            <objects>
+                <navigationController id="bS6-ij-slG" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="h5C-uV-aJ3">
+                        <rect key="frame" x="0.0" y="20" width="1024" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="barTintColor" red="1" green="0.50196081400000003" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                        <textAttributes key="titleTextAttributes">
+                            <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                        </textAttributes>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="Ayj-Eg-pxl" kind="relationship" relationship="rootViewController" id="5dY-Rg-tQs"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Hkf-Gl-XSG" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-897" y="161"/>
+        </scene>
+        <!--LivePerson-->
+        <scene sceneID="maM-wI-gaR">
+            <objects>
+                <viewController storyboardIdentifier="MainViewController" id="Ayj-Eg-pxl" customClass="ViewController" customModule="SampleSDK27" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Qqm-8z-YMa">
+                        <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="LivePersonBackground" translatesAutoresizingMaskIntoConstraints="NO" id="z30-bE-Pfh">
+                                <rect key="frame" x="252" y="322" width="520" height="124"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rS1-72-tm1" customClass="UIRectButton" customModule="SampleSDK27" customModuleProvider="target">
+                                <rect key="frame" x="472" y="703" width="80" height="45"/>
+                                <color key="backgroundColor" red="1" green="0.50196081400000003" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <state key="normal" title="Chat"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="7"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="startMessaging:" destination="Ayj-Eg-pxl" eventType="touchUpInside" id="GiR-fC-Jf6"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IhW-60-XUb" customClass="UIRectButton" customModule="SampleSDK27" customModuleProvider="target">
+                                <rect key="frame" x="472" y="650" width="80" height="45"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.50196081400000003" green="0.50196081400000003" blue="0.50196081400000003" alpha="1" colorSpace="calibratedRGB"/>
+                                <state key="normal" title="Logout">
+                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="7"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="logoutButtonTapped:" destination="Ayj-Eg-pxl" eventType="touchUpInside" id="ZFK-ZV-Rpt"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="z30-bE-Pfh" firstAttribute="top" secondItem="65q-7I-VCT" secondAttribute="top" constant="258" id="0ed-KF-dc3"/>
+                            <constraint firstItem="z30-bE-Pfh" firstAttribute="centerY" secondItem="Qqm-8z-YMa" secondAttribute="centerY" id="53B-b1-VPu"/>
+                            <constraint firstItem="rS1-72-tm1" firstAttribute="leading" secondItem="65q-7I-VCT" secondAttribute="leading" constant="472" id="8rL-TY-UDM"/>
+                            <constraint firstItem="z30-bE-Pfh" firstAttribute="centerX" secondItem="Qqm-8z-YMa" secondAttribute="centerX" id="G6t-At-wWR"/>
+                            <constraint firstItem="65q-7I-VCT" firstAttribute="trailing" secondItem="rS1-72-tm1" secondAttribute="trailing" constant="472" id="IaB-cc-q4s"/>
+                            <constraint firstItem="rS1-72-tm1" firstAttribute="top" secondItem="z30-bE-Pfh" secondAttribute="bottom" constant="257" id="Vcs-cb-3xJ"/>
+                            <constraint firstItem="z30-bE-Pfh" firstAttribute="leading" secondItem="65q-7I-VCT" secondAttribute="leading" constant="252" id="pL9-g6-o1t"/>
+                            <constraint firstItem="65q-7I-VCT" firstAttribute="bottom" secondItem="rS1-72-tm1" secondAttribute="bottom" constant="20" id="saR-Mp-kdL"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="65q-7I-VCT"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="LivePerson" id="eZL-Ot-wm3"/>
+                    <connections>
+                        <segue destination="Us7-4l-wrf" kind="show" identifier="MainToChatScreen" id="0W7-hn-6nb"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="L67-UL-JOf" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-137" y="161"/>
+        </scene>
+        <!--LivePerson-->
+        <scene sceneID="3IQ-AA-xyy">
+            <objects>
+                <viewController storyboardIdentifier="ConversationViewController" id="Us7-4l-wrf" customClass="ConversationViewController" customModule="SampleSDK27" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="UZI-nC-e7B">
+                        <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                        <viewLayoutGuide key="safeArea" id="dkP-fY-6kI"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="LivePerson" id="SyJ-KP-kqt">
+                        <barButtonItem key="leftBarButtonItem" title="Back" id="HBY-20-Z9A">
+                            <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                            <connections>
+                                <action selector="backButtonPressed:" destination="Us7-4l-wrf" id="cyO-td-7AB"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" title="Menu" id="yh7-fm-BC7">
+                            <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                            <connections>
+                                <action selector="menuButtonPressed:" destination="Us7-4l-wrf" id="TYK-QH-o2c"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="eEX-jy-s1m" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="499" y="161"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="LivePersonBackground" width="2480" height="532"/>
+    </resources>
+</document>

@@ -3,3 +3,15 @@ SampleSDK23/Podfile
 SampleSDK23/Podfile.lock
 SampleSDK23/Pods/
 SampleSDK23/SampleSDK23.xcworkspace
+SampleSDK27/Podfile
+SampleSDK27/Podfile.lock
+SampleSDK27/Pods/
+SampleSDK27/SampleSDK23.xcworkspace
+SampleSDK28/Podfile
+SampleSDK28/Podfile.lock
+SampleSDK28/Pods/
+SampleSDK28/SampleSDK23.xcworkspace
+SampleSDK30/Podfile
+SampleSDK30/Podfile.lock
+SampleSDK30/Pods/
+SampleSDK30/SampleSDK23.xcworkspace

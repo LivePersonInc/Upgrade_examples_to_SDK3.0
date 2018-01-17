@@ -1,0 +1,18 @@
+/* 
+  LPLocalizable.strings
+  SampleSDK27
+
+  Created by David Villacis on 12/6/17.
+  Copyright © 2017 David Villacis. All rights reserved.
+*/
+"hiMessage" = "Hello, is there anything I can do for you today?";
+// Fist String is Agent Name, Second is Timestamp
+"conversationEndedByAgent" = "%@ resolved the Conversation \n %@";
+// Change Default Closing Line (Conversation resolved by You)
+"conversationEndedByYou" = "Conversation was closed by You \n %@";
+// Change Default Line (Sent)
+"readReceiptTextSent" = "was Sent";
+// Change Default Line (Distributed)
+"readReceiptTextDistributed" = "was Distributed";
+// Change Default Line (Read)
+"readReceiptTextRead" = "was Read";
