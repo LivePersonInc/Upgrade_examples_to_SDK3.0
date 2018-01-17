@@ -1,11 +1,11 @@
 # Upgrating LPMessagingSDK to 3.0
 Examples for upgrading SDK versions 2.3 / 2.7 and 2.8 to 3.0
 
-* [Upgrating LPMessagingSDK 2.3](#markdown-header-Updating-from-2.3-to-3.0)
-* [Upgrating LPMessagingSDK 2.7](#markdown-header-Updating-from-2.7-to-3.0)
-* [Upgrating LPMessagingSDK 2.8](#markdown-header-Updating-from-2.8-to-3.0)
+* [Upgrating LPMessagingSDK 2.3](#update23)
+* [Upgrating LPMessagingSDK 2.7](#update27)
+* [Upgrating LPMessagingSDK 2.8](#update28)
 
-## Updating from 2.3 to 3.0
+## <a name="update23"></a> Updating from 2.3 to 3.0
 
 #### Step 1: Update Podfile
 
@@ -141,7 +141,7 @@ When implementing a Custom ViewController there are a few things to consider:
     
     
     
-## Updating from 2.7 to 3.0
+## <a name="update27"></a> Updating from 2.7 to 3.0
 
 
 
@@ -217,7 +217,7 @@ When implementing a Custom ViewController there are a few things to consider:
 
 
 
-## Updating from 2.8 to 3.0
+## <a name="update28"></a> Updating from 2.8 to 3.0
 
 
 
