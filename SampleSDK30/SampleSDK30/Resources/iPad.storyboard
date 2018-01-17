@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Tka-Se-ZCv">
+    <device id="ipad9_7" orientation="landscape">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Navigation Controller-->
+        <scene sceneID="Tk1-DB-cfB">
+            <objects>
+                <navigationController id="Tka-Se-ZCv" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="9BC-s0-pAK">
+                        <rect key="frame" x="0.0" y="20" width="1024" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="barTintColor" red="1" green="0.50196081400000003" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                        <textAttributes key="titleTextAttributes">
+                            <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                        </textAttributes>
+                        <textAttributes key="largeTitleTextAttributes">
+                            <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                        </textAttributes>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="cqe-aW-QKa" kind="relationship" relationship="rootViewController" id="y8n-c7-cg1"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Vcu-eL-5yh" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-421" y="-321"/>
+        </scene>
+        <!--LivePerson-->
+        <scene sceneID="2MB-PD-BaC">
+            <objects>
+                <viewController storyboardIdentifier="MainViewController" id="cqe-aW-QKa" customClass="ViewController" customModule="SampleSDK30" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="xv5-3n-8dI">
+                        <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="LivePersonBackground" translatesAutoresizingMaskIntoConstraints="NO" id="bRm-gl-R83">
+                                <rect key="frame" x="240" y="320" width="545" height="128"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="bRm-gl-R83" secondAttribute="height" multiplier="485:128" constant="60" id="ZWD-yn-VwQ"/>
+                                </constraints>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Hxp-0D-eWg">
+                                <rect key="frame" x="472" y="703" width="80" height="45"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="1" green="0.50196081400000003" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <state key="normal" title="Chat">
+                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="chatButtonPressed:" destination="cqe-aW-QKa" eventType="touchUpInside" id="Hgu-uu-EsP"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="bRm-gl-R83" firstAttribute="top" secondItem="61W-9w-e8A" secondAttribute="top" constant="256" id="5bs-Tw-8sl"/>
+                            <constraint firstItem="61W-9w-e8A" firstAttribute="trailing" secondItem="bRm-gl-R83" secondAttribute="trailing" constant="239" id="teI-UC-Ywe"/>
+                            <constraint firstItem="bRm-gl-R83" firstAttribute="leading" secondItem="61W-9w-e8A" secondAttribute="leading" constant="240" id="ypX-LX-Gtb"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="61W-9w-e8A"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="LivePerson" id="Pee-jy-b4f"/>
+                    <connections>
+                        <outlet property="chatButton" destination="Hxp-0D-eWg" id="fmA-Xu-OvD"/>
+                        <segue destination="7gm-QF-2TL" kind="show" identifier="MainToMessagingSegue" id="5mN-mq-wXM"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="iwp-Ey-lKv" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="223" y="-321"/>
+        </scene>
+        <!--LivePerson-->
+        <scene sceneID="5GE-eh-KPb">
+            <objects>
+                <viewController storyboardIdentifier="ConversationViewController" id="7gm-QF-2TL" customClass="ConversationViewController" customModule="SampleSDK30" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="iW7-QR-AXf">
+                        <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <viewLayoutGuide key="safeArea" id="K1F-TX-4SX"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="LivePerson" id="6ZJ-kQ-JIA">
+                        <barButtonItem key="leftBarButtonItem" title="Back" id="UYS-qh-x3g">
+                            <connections>
+                                <action selector="backButtonPressed:" destination="7gm-QF-2TL" id="nl5-v4-IF1"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" title="Menu" id="SAL-Ga-XSq">
+                            <connections>
+                                <action selector="menuButtonPressed:" destination="7gm-QF-2TL" id="Pex-jB-EKX"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="6nn-hW-jse" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="903" y="-321"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="LivePersonBackground" width="2480" height="532"/>
+    </resources>
+</document>
