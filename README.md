@@ -98,11 +98,11 @@ Examples for upgrading SDK versions 2.3 / 2.7 and 2.8 to 3.0
 	
 	~~~ swift
 	LPMessagingSDK.instance.logout(completion: {
-    		// Log - Success
-	    	print("User:: logged out")
+		// Log - Success
+		print("User:: logged out")
     	}) { (error) in
-    		// Log - Error
-    		print("User:: \(error.localizedDescription)")
+		// Log - Error
+		print("User:: \(error.localizedDescription)")
 	}
 	~~~
 
@@ -110,12 +110,12 @@ Examples for upgrading SDK versions 2.3 / 2.7 and 2.8 to 3.0
 * Structure Content:
         
     ~~~ swift
-	// Enable Structure Content
-        config.enableStrucutredContent = true
-        // Set Structure Content Border Color
-        config.structuredContentBubbleBorderColor = UIColor.black
-    	// Set Structure Content Bubble Border Width in Pixels
-        config.structuredContentBubbleBorderWidth = 1.5
+    // Enable Structure Content
+    config.enableStrucutredContent = true
+    // Set Structure Content Border Color
+    config.structuredContentBubbleBorderColor = UIColor.black
+    // Set Structure Content Bubble Border Width in Pixels
+    config.structuredContentBubbleBorderWidth = 1.5
     ~~~
 		
 
@@ -165,7 +165,7 @@ When implementing a Custom ViewController there are a few things to consider:
 * Update Podfile
     
     ```sh
-        $ pod update
+	$ pod update
     ```
 	
 #### Step 3: Clean Xcode Project
@@ -188,10 +188,10 @@ When implementing a Custom ViewController there are a few things to consider:
 	~~~ swift
 	LPMessagingSDK.instance.logout(completion: {
 		// Log - Success
-    		print("User:: logged out")
+		print("User:: logged out")
     	}) { (error) in
-    		// Log - Error
-    		print("User:: \(error.localizedDescription)")
+		// Log - Error
+		print("User:: \(error.localizedDescription)")
 	}
 	~~~
 
