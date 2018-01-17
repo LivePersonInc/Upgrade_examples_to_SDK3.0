@@ -5,6 +5,8 @@ Examples for upgrading SDK versions 2.3 / 2.7 and 2.8 to 3.0
 * [Upgrating LPMessagingSDK 2.7](#update27)
 * [Upgrating LPMessagingSDK 2.8](#update28)
 
+> IMPORTANT: Upgrating to LPMessagingSDK 3.0, requires Swift 4.0.2 and Xcode 9.2
+
 ## <a name="update23"></a> Updating from 2.3 to 3.0
 
 #### Step 1: Update Podfile
