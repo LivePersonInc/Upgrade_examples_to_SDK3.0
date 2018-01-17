@@ -14,12 +14,12 @@ Examples for upgrading SDK versions 2.3 / 2.7 and 2.8 to 3.0
   * Update LPMessagingSDK Pod
   
   	```ruby
-  		target '<YourApplicatioName>' do
-     	    # Update change LPMessagingSDK Pod from:
-  	   	    pod 'LPMessagingSDK','~> 2.3.0'
-   	  	    # To:
-   	  	    pod 'LPMessagingSDK','~> 3.0.0'
-   	  	end
+  	target '<YourApplicatioName>' do
+		# Update change LPMessagingSDK Pod from:
+	  	pod 'LPMessagingSDK','~> 2.3.0'
+		# To:
+   	  	pod 'LPMessagingSDK','~> 3.0.0'
+	end
   	```
 
 #### Step 2: Update Pod
@@ -42,7 +42,7 @@ Examples for upgrading SDK versions 2.3 / 2.7 and 2.8 to 3.0
 	Previous implementation:
 	
 	~~~ swift
-		LPMessagingSDK.instance.showConversation(self.conversationQuery!, 
+	LPMessagingSDK.instance.showConversation(self.conversationQuery!, 
                                                 authenticationCode: nil, 
                                                 containerViewController: nil)
 	~~~
@@ -50,23 +50,23 @@ Examples for upgrading SDK versions 2.3 / 2.7 and 2.8 to 3.0
 	New implementation for WindowMode:
 	
 	~~~ swift
-		// Create ConversationViewParams
-		let conversationViewParams = LPConversationViewParams(conversationQuery: self.conversationQuery!, containerViewController: nil, isViewOnly: false)
-		// Create AuthenticationParams
-		let authenticationParams = LPAuthenticationParams()
-		// Show Conversation
-		LPMessagingSDK.instance.showConversation(conversationViewParams, authenticationParams: authenticationParams)
+	// Create ConversationViewParams
+	let conversationViewParams = LPConversationViewParams(conversationQuery: self.conversationQuery!, containerViewController: nil, isViewOnly: false)
+	// Create AuthenticationParams
+	let authenticationParams = LPAuthenticationParams()
+	// Show Conversation
+	LPMessagingSDK.instance.showConversation(conversationViewParams, authenticationParams: authenticationParams)
 	~~~
 	
 	New implementation for custom ViewController:
 	
 	~~~ swift
-		// Create ConversationViewParams
-		let conversationViewParams = LPConversationViewParams(conversationQuery: self.conversationQuery!, containerViewController: viewController, isViewOnly: false)
-		// Create AuthenticationParams
-		let authenticationParams = LPAuthenticationParams()
-		// Show Conversation
-		LPMessagingSDK.instance.showConversation(conversationViewParams, authenticationParams: authenticationParams)
+	// Create ConversationViewParams
+	let conversationViewParams = LPConversationViewParams(conversationQuery: self.conversationQuery!, containerViewController: viewController, isViewOnly: false)
+	// Create AuthenticationParams
+	let authenticationParams = LPAuthenticationParams()
+	// Show Conversation
+	LPMessagingSDK.instance.showConversation(conversationViewParams, authenticationParams: authenticationParams)
 	~~~
   	
 * **reconnect** method needs to be replace:
@@ -74,16 +74,16 @@ Examples for upgrading SDK versions 2.3 / 2.7 and 2.8 to 3.0
     Previous implementation:
 
 	~~~ swift
-	    LPMessagingSDK.instance.reconnect(conversationQuery!, authenticationCode: "")
+	LPMessagingSDK.instance.reconnect(conversationQuery!, authenticationCode: "")
 	~~~
 
 	New implementation:
 	
 	~~~ swift
-		// Create Authentication Params
-		let authParams = LPAuthenticationParams()
-		// Show Conversation
-		LPMessagingSDK.instance.reconnect(self.conversationQuery!, authenticationParams: authParams
+	// Create Authentication Params
+	let authParams = LPAuthenticationParams()
+	// Show Conversation
+	LPMessagingSDK.instance.reconnect(self.conversationQuery!, authenticationParams: authParams
 	~~~  	
     	
 * **logout** method needs to be replace:
@@ -91,26 +91,26 @@ Examples for upgrading SDK versions 2.3 / 2.7 and 2.8 to 3.0
 	Previous implementation:
 
 	~~~ swift
-		LPMessagingSDK.instance.logout()
+	LPMessagingSDK.instance.logout()
 	~~~
 
 	New implementation:
 	
 	~~~ swift
-		LPMessagingSDK.instance.logout(completion: {
+	LPMessagingSDK.instance.logout(completion: {
     		// Log - Success
-    		print("User:: logged out")
+	    	print("User:: logged out")
     	}) { (error) in
     		// Log - Error
     		print("User:: \(error.localizedDescription)")
-		}
+	}
 	~~~
 
 ##### New Configurations
 * Structure Content:
         
     ~~~ swift
-        // Enable Structure Content
+	// Enable Structure Content
         config.enableStrucutredContent = true
         // Set Structure Content Border Color
         config.structuredContentBubbleBorderColor = UIColor.black
@@ -125,7 +125,7 @@ When implementing a Custom ViewController there are a few things to consider:
 
  * Remove Conversation from View if viewWillDisappear()
     
-    ``` swift
+    ~~~ swift
     /// Event - View will disappear
     override func viewWillDisappear(_ animated: Bool) {
         // Super Init
@@ -137,7 +137,7 @@ When implementing a Custom ViewController there are a few things to consider:
             LPMessagingSDK.instance.removeConversation(self.conversationQuery!)
         }
     }
-    ```
+    ~~~
     
     > Note: if implementing custom Back Button on the Navigation Bar, this needs to be consider too.
     
@@ -152,12 +152,12 @@ When implementing a Custom ViewController there are a few things to consider:
   * Update LPMessagingSDK Pod
   
   	```ruby
-  		target '<YourApplicatioName>' do
-     	    # Update change LPMessagingSDK Pod from:
-  	   	    pod 'LPMessagingSDK','~> 2.7.0'
-   	  	    # To:
-   	  	    pod 'LPMessagingSDK','~> 3.0.0'
-   	  	end
+	target '<YourApplicatioName>' do
+		# Update change LPMessagingSDK Pod from:
+  	   	pod 'LPMessagingSDK','~> 2.7.0'
+   	  	# To:
+   	  	pod 'LPMessagingSDK','~> 3.0.0'
+	end
   	```
 
 #### Step 2: Update Pod
@@ -180,19 +180,19 @@ When implementing a Custom ViewController there are a few things to consider:
 	Previous implementation:
 
 	~~~ swift
-		LPMessagingSDK.instance.logout()
+	LPMessagingSDK.instance.logout()
 	~~~
 
 	New implementation:
 	
 	~~~ swift
-		LPMessagingSDK.instance.logout(completion: {
-    		// Log - Success
+	LPMessagingSDK.instance.logout(completion: {
+		// Log - Success
     		print("User:: logged out")
     	}) { (error) in
     		// Log - Error
     		print("User:: \(error.localizedDescription)")
-		}
+	}
 	~~~
 
 #### Step 4 (Optional): Custom ViewController
@@ -201,7 +201,7 @@ When implementing a Custom ViewController there are a few things to consider:
 
  * Remove Conversation from View if viewWillDisappear()
     
-    ``` swift
+    ~~~ swift
     /// Event - View will disappear
     override func viewWillDisappear(_ animated: Bool) {
         // Super Init
@@ -213,7 +213,7 @@ When implementing a Custom ViewController there are a few things to consider:
             LPMessagingSDK.instance.removeConversation(self.conversationQuery!)
         }
     }
-    ```
+    ~~~
     
     > Note: if implementing custom Back Button on the Navigation Bar, this needs to be consider too.
 
@@ -228,12 +228,12 @@ When implementing a Custom ViewController there are a few things to consider:
   * Update LPMessagingSDK Pod
   
   	```ruby
-  		target '<YourApplicatioName>' do
-     	    # Update change LPMessagingSDK Pod from:
-  	   	    pod 'LPMessagingSDK','~> 2.8.0'
-   	  	    # To:
-   	  	    pod 'LPMessagingSDK','~> 3.0.0'
-   	  	end
+	target '<YourApplicatioName>' do
+		# Update change LPMessagingSDK Pod from:
+		pod 'LPMessagingSDK','~> 2.8.0'
+		# To:
+		pod 'LPMessagingSDK','~> 3.0.0'
+	end
   	```
 
 #### Step 2: Update Pod
