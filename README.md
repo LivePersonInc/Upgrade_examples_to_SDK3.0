@@ -13,13 +13,18 @@ Examples for upgrading SDK versions 2.3 / 2.7 and 2.8 to 3.0
 
   Update LPMessagingSDK Pod
 
-  ~~~ ruby
+ ~~~ ruby
+	
     target ‘<YourApplicatioName>’ do
       # Update change LPMessagingSDK Pod from:
+      
       pod 'LPMessagingSDK','~> 2.3.0'
+      
       # To:
-      pod ‘LPMessagingSDK','~> 3.0.0'
- ~~~
+      
+      pod 'LPMessagingSDK','~> 2.3.0'
+      
+~~~
   	
     
 ### Updating from 2.7 to 3.0
