@@ -1,11 +1,11 @@
-## Upgrating LPMessagingSDK to 3.0
+# Upgrating LPMessagingSDK to 3.0
 Examples for upgrading SDK versions 2.3 / 2.7 and 2.8 to 3.0
 
-* [Upgrating LPMessagingSDK 2.3](#Updating-from-2.3-to-3.0)
-* [Upgrating LPMessagingSDK 2.7](#Updating-from-2.7-to-3.0)
-* [Upgrating LPMessagingSDK 2.8](#Updating-from-2.8-to-3.0)
+* [Upgrating LPMessagingSDK 2.3](#updating-from-2.3-to-3.0)
+* [Upgrating LPMessagingSDK 2.7](#updating-from-2.7-to-3.0)
+* [Upgrating LPMessagingSDK 2.8](#updating-from-2.8-to-3.0)
 
-### Updating from 2.3 to 3.0
+## Updating from 2.3 to 3.0
 
 #### Step 1: Update Podfile
 
@@ -138,8 +138,12 @@ When implementing a Custom ViewController there are a few things to consider:
     ```
     
     > Note: if implementing custom Back Button on the Navigation Bar, this needs to be consider too.
+    
+    
+    
+## Updating from 2.7 to 3.0
 
-### Updating from 2.7 to 3.0
+
 
 #### Step 1: Update Podfile
 
@@ -211,7 +215,11 @@ When implementing a Custom ViewController there are a few things to consider:
     
     > Note: if implementing custom Back Button on the Navigation Bar, this needs to be consider too.
 
-### Updating from 2.8 to 3.0`
+
+
+## Updating from 2.8 to 3.0
+
+
 
 #### Step 1: Update Podfile
 
